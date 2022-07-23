@@ -8,14 +8,30 @@ html, body {
   background-color: #f5f6f7;
 }
 
-.App {
+@media (min-width: 480px){
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-widht: 767px){
+  .App {
+    flex-direction: column;
+  }
+}
+/* .App {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} */
 
 .contenedor-principal {
   min-height: 300px;

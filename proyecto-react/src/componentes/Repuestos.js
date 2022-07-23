@@ -1,19 +1,16 @@
 import React from "react";
-import '../estilos/Autos.css';
+import '../estilos/Repuestos.css';
 
-function Autos(props) {
+function Repuestos(props) {
   return(
-    <div className="contenedor-autos">
+    <div className="contenedor-repuestos">
       <img 
         className="contenedor-imagen"
         src={require(`../imagenes/${props.imagen}.jpg`)}
-        alt="auto" />
+        alt="" />
       <div className="contenedor-texto">
-        <p className="nombre-auto">
-          {props.auto} - {props.modelo}
-        </p>
-        <p className="kilometraje">
-          Tiene {props.kilometraje}
+        <p className="nombre-repuesto">
+          {props.repuesto} 
         </p>
         <p className="descripcion">
           {props.descripcion}
@@ -23,4 +20,4 @@ function Autos(props) {
   );
 }
 
-export default Autos; 
+export default Repuestos; 

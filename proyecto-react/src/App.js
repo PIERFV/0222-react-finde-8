@@ -1,5 +1,5 @@
 import './App.css';
-import Autos from './componentes/Autos';
+import Repuestos from './componentes/Repuestos';
 
 
 
@@ -9,25 +9,19 @@ function App() {
     <div className="App">
       
       <div className='contenedor-principal'>
-        <Autos
+        <Repuestos
         imagen = 'aceite'
-        auto = 'focus'
-        modelo = '2020'
-        kilometraje = '100000'
+        repuesto = 'Aceite - Total'
         descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
 
-        <Autos
+        <Repuestos
         imagen = 'bomba-agua'
-        auto = 'focus'
-        modelo = '2020'
-        kilometraje = '100000'
-        descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
+        repuesto = 'Bomba de Agua - Peugeot'
+        descripcion = 'Bomba de Agua SKF Peugeot 205 1.8D Diesel 92-00' />
 
-        <Autos
+        <Repuestos
         imagen = 'embrague'
-        auto = 'focus'
-        modelo = '2020'
-        kilometraje = '100000'
+        repuesto = 'Embrague - Ford'
         descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
       </div>
       

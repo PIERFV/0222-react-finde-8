@@ -1,4 +1,4 @@
-.contenedor-autos {
+.contenedor-repuestos {
     width: 1170px;
     height: 268px;
     margin: 10px 10px 20px;
@@ -12,10 +12,11 @@
 
 .contenedor-imagen {
     height: 100%;
-    width: auto;
+    width: 270px;
 }
 
 .contenedor-texto {
+    width: 900px;
     text-align: center;
     padding: 40px;
     font-family: Arial;
@@ -23,18 +24,15 @@
     line-height: 1.5rem;
 }
 
-.nombre-auto {
-    font-size: 1.3rem;
+.nombre-repuesto {
+    font-size: 1.8rem;
 }
 
 
-.kilometraje {
-    text-align: center;
-    font-family: Arial;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+
 
 .descripcion {
-    text-align: justify;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 25px;
 }
