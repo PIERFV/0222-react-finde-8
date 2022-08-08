@@ -9,7 +9,6 @@
     box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
 }
 
-
 .contenedor-imagen {
     height: 100%;
     width: 270px;
@@ -27,9 +26,6 @@
 .nombre-repuesto {
     font-size: 1.8rem;
 }
-
-
-
 
 .descripcion {
     text-align: center;
