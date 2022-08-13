@@ -1,14 +1,16 @@
 import './App.css';
 import Repuestos from './componentes/Repuestos';
 import Card from './componentes/Card';
+import Navbar from './componentes/navbar/Navbar';
 
 
 
 
 function App() {
   return (
+
     <div className="App">
-      
+      <Navbar/>
       <div className='contenedor-principal'>
         <Repuestos
         imagen = 'aceite'
