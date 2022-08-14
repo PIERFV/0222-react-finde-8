@@ -11,6 +11,7 @@ function Navbar(){
     setClicked(!clicked)
     }
     return(
+      <>
         <NavContainer>
             <h2>Logo</h2>
             <div  className={`links ${clicked ? 'active' : ''}`}>
@@ -22,6 +23,7 @@ function Navbar(){
                 <BurguerButton clicked={clicked} handleClick={handleClick} />
             </div>
         </NavContainer>
+        </>
     )
     }
 
@@ -36,7 +38,7 @@ const NavContainer = styled.nav`
     }
   }
   padding: .4rem;
-  background-color: #007EE5;
+  background-color: #324A51;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,7 +57,7 @@ const NavContainer = styled.nav`
     text-align: center;
     transition: all .5s ease;
     a{
-      color: white;
+      color: #000;
       font-size: 2rem;
       display: block;
     }
@@ -83,7 +85,7 @@ const NavContainer = styled.nav`
     left: 0;
     right: 0;
     text-align: center;
-    background-color:rgba( 230, 244 , 241 , .7);
+    background-color:rgba( 50, 74 , 81, .7);
     border-radius: 0 0  70% 60%;
     transition: all .7s ease ;
     cursor : pointer;
