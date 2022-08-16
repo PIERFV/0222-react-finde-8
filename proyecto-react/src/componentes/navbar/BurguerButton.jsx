@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 function BurguerButton(props) {
+  // la funcion del ternario es cuando haga click en el buttom mueva en diferentes en diferentes ejes  
   return (
     <Burguer>
       <div  onClick={props.handleClick} 
@@ -16,9 +17,9 @@ function BurguerButton(props) {
 }
 
 export default BurguerButton
-
+//estilizar componentes 
 const Burguer = styled.div`
-  /* nav-icon-5 */
+  /* buttom*/
 .nav-icon-5{
   width: 35px;
   height: 30px;
