@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import InputEmail from './InputEmail'
 import Button from './ButtonR'
 
+// falta una funcion para eviatar el que cuando se envie el formulario no carge la pagina 
 function PieDePag (){
     return (
         <>
@@ -19,24 +20,32 @@ function PieDePag (){
                         <li><a href="#"> Productos</a></li>
                         <li><a href="#">Nosotros</a></li>
                     </ul>
+                    <p className='copyright'>&copy Copyright - 2022</p>
             </ div>
             <div className="logo_input">
                 <h3> Logo </h3>
                 <p>¿ Quieres recibir promociones ?</p>
                 <form>
+                    <div className="formu">
                     <InputEmail tipo="email" name="correo" id="09876" required />
-                    <Button/>
+                    </div>
+                    <div className="boton">
+                    <Button type = "submit" id="09876"/>
+                    </div>
                 </form>
+                
             </div>
+               
         </Footer>
         </>
     )
 }
 
-export default PieDePag
 
+export default PieDePag
+// estilizar componentes 
 const Footer = styled.footer`
-    
+    /*Footer*/
     width : 100%;
     background-color: #324A51;
     height: 65vh;
@@ -44,13 +53,41 @@ const Footer = styled.footer`
     justify-content: space-around;
     flex-direction: row-reverse;
     padding: .4rem;
+    @media(max-width : 768px){
+        display: flex;
+        height: 49rem;
+        flex-direction: column-reverse;
+        justify-content :center;
+        align-content: space-between;
+        
+        
+    }
 
 .Descripcion{
    width : 75%;
    background-color: #324A51;
    text-align: center;
    height: 55vh;
+   @media(max-width : 768px){
+    display: flex;
+    background-color:#324A51;
+    width : 100%;
+    height: 33rem;
+    flex-direction: column;
+    margin-top:2rem;
+    h3{
+    text-aling: center;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    }
+
+
+    }
 }
+.Descripcion h3{
+    margin-bottom: 3vh;
+}
+
 .Descripcion p{
     color : #000;
 }
@@ -74,6 +111,17 @@ li a{
     background-color:#324A51;
     width: 25%;
     height: 55vh;
+    @media(max-width : 768px){
+        background-color : #324A51;
+        width: 50%;
+        .formu{
+            text-align: center;
+        }
+        .boton{
+            text-align: center;
+            margin-top: 3vh;
+        }
+    }
 
 }
 
@@ -94,5 +142,24 @@ from{
     margin-left : 1rem;
 }
 
+.formu{
+    text-align: center;
+    padding-right: 8vh;
+}
+.boton{
+    text-align: center;
+    margin-top: 3vh;
+    padding-right: 10vh;
+}
+
+.copyright{
+    padding-right: 15rem;
+    @media(max-width : 768px){
+        text-align: center;
+        margin-left : 12rem;
+        margin-top: 11.4vh;
+        
+    }
+}
 `
 
