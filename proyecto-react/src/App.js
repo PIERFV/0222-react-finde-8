@@ -12,7 +12,7 @@ function App() {
         <Repuestos
         imagen = 'aceite'
         repuesto = 'Aceite - Total'
-        descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
+        descripcion = 'TOTAL QUARTZ 7000 NAFTA/DIESEL 10W40 X4LTS.' />
 
         <Repuestos
         imagen = 'bomba-agua'
@@ -22,7 +22,7 @@ function App() {
         <Repuestos
         imagen = 'embrague'
         repuesto = 'Embrague - Ford'
-        descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
+        descripcion = 'Embrague Ford Focus - Linea 2014/2020' />
       </div>
       
     </div>
