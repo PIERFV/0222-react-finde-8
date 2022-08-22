@@ -19,30 +19,4 @@ html, body {
   grid-template-columns: 1fr;
 }
 
-.contenedor-principal {
-  min-height: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
 
-@media (min-height: 600px) {
-  .App {
-    min-height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    grid-template-columns: 1fr;
-  }
-  
-  .contenedor-principal {
-    min-height: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-} 
