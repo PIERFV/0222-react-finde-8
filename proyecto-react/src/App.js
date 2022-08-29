@@ -1,5 +1,5 @@
 import './App.css';
-import Repuestos from './componentes/Repuestos';
+import Carrusel from './componentes/Carrusel';
 import Card from './componentes/Card';
 import Navbar from './componentes/navbar/Navbar';
 import PieDePag from './componentes/footer/Footer';
@@ -12,21 +12,11 @@ function App() {
     <>
       <div className="App">
         <Navbar/>
-        <div className='contenedor-principal'>
-          <Repuestos
-          imagen = 'aceite'
-          repuesto = 'Aceite - Total'
-          descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
-
-          <Repuestos
-          imagen = 'bomba-agua'
-          repuesto = 'Bomba de Agua - Peugeot'
-          descripcion = 'Bomba de Agua SKF Peugeot 205 1.8D Diesel 92-00' />
-
-          <Repuestos
-          imagen = 'embrague'
-          repuesto = 'Embrague - Ford'
-          descripcion = 'auto de primera mano Muy cuidado Altas prestaciones' />
+        <div className='carrusel'>
+        <Carrusel
+          imagen = 'banner1'
+          imagen2 = 'banner2'
+          imagen3 = 'banner3' />
         </div>
         <div className='contenedor_card_general'>
           <Card
