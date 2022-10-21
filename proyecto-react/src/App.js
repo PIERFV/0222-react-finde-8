@@ -10,14 +10,10 @@ import PieDePag from './componentes/footer/Footer';
 function App() {
   return (
     <>
+      <Navbar/>
       <div className="App">
-        <Navbar/>
-        <div className='carrusel'>
-        <Carrusel
-          imagen = 'banner1'
-          imagen2 = 'banner2'
-          imagen3 = 'banner3' />
-        </div>
+        
+    
         <div className='contenedor_card_general'>
           <Card
           card_imagen = 'cubrealfombra'
