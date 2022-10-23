@@ -67,7 +67,6 @@ const Burguer = styled.div`
 .nav-icon-5.open span:nth-child(2){
   transform: rotate(0deg) scaleY(1.1);
   left:5px;
-
 }
 .nav-icon-5.open span:nth-child(3){
   transform: rotate(40deg);

@@ -12,101 +12,128 @@ import BurguerButton from './BurguerButton'
     }
     return(
       //handleClick en los links hace que cuando se haga click cierre el nav 
-      // comparacion con un ternario  ? : 
-      <>
+      // comparacion con un ternario  ? :handleClick={handleClick}  
+      
         <NavContainer>
             <h2>Logo</h2>
             <div  className={`links ${clicked ? 'active' : ''}`}>
-                <a  onClick={handleClick} href="#">inicio</a>
-                <a  onClick={handleClick} hhref="#">productos</a>
-                <a  onClick={handleClick} hhref="#">Nosotros !!</a>
+                <a  href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">inicio</a>
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">productos</a>
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">Nosotros</a>
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">Compras</a>
             </div>
             <div className='burguer'>
-                <BurguerButton clicked={clicked} handleClick={handleClick} />
+                <BurguerButton clicked={clicked} handleClick={handleClick}/>
             </div>
-            
         </NavContainer>
-        </>
+        
     )
     }
 
 export default Navbar
 //estilos componentes
 const NavContainer = styled.nav`
-  h2{
-    color: white;
-    font-weight: 400;
-    span{
-      font-weight: bold;
-    }
-  }
+
+h2{
+  color:#fff;
+  margin-left:0.5rem;
+}
+@media(max-width : 350px){
+  width: 350px;
   padding: .4rem;
-  background-color: #324A51;
+  background-color:#000;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+}
+position: sticky;
+width: 100%;
+padding: .4rem;
+background-color:#000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index:1000;
+
+
+
+.links{
+  position:absolute;
+  top:-43rem;
+  visibility:hidden;
+  right:0rem;
+  width:17rem;
+  display: flex;
+  flex-direction:column;
+  background-color:#5E5E5E;
+  height:20rem;
+  position:absolute;
+  text-align: right;
+  border-radius: 10%;
+  z-index:99;
+  transition: all .1s ease;
   a{
+    margin-right:0.7rem;
+    margin-top:0.7rem;
+    text-decoration: none;
+    color:#fff;
+    font-size:1.2rem;
+  }
+}
+
+.links.active{
+  visibility:visible;
+  width:13rem;
+  display: flex;
+  flex-direction:column;
+  background-color:#5E5E5E;
+  height :20rem;
+  position:absolute;
+  top:3.9rem;
+  right:0rem;
+  text-align: right;
+  border-radius: 5% 0  5% 5%;
+  transition: all .5s ease ;
+  z-index:101;
+  a{
+    margin-right: 1rem;
+    margin-top:0.7rem;
+    text-decoration: none;
+    color:#fff;
+    font-size:1.2rem;
+  }
+}
+
+@media(min-width : 800px){
+  .burguer{
+    position:absolute;
+    top:-43rem;
+    visibility:hidden;
+  }
+
+  @media(min-width : 800px){
+    .links{
+      position:absolute;
+      top:0;
+      right:5.8rem;
+      flex-direction:row;
+      background-color:#000;
+      visibility:visible;
+      height:3rem;
+    }
+    a{
     color: white;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right:0.5rem;
+    margin-left:0.5rem;
+    font-size:1.1rem;
+    }
   }
-  .links{
-    position: absolute;
-    top: -700px; 
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background-color:rgba( 50, 74 , 81, .1);
-    transition: all .1s ease;
+  
 
-    a{
-      visibility: hidden;
-    }
-    @media(min-width: 768px){
-      position: initial;
-      margin: 0;
-      margin-left: 52rem;
-      a{
-        font-size: 1rem;
-        color: #fff;
-        display: inline;
-        cursor: pointer;
-        visibility: visible  ;
-        
-      }
-      display: block;
-    }
-  }
-  .links.active{
-    height : 12vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 11.5%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color:rgba( 50, 74 , 81, .7);
-    border-radius: 0 0  70% 60%;
-    transition: all .5s ease ;
-    cursor : pointer;
-    a{
-      font-size: 1.5rem;
-      margin-top: .3rem;
-      color: #000;
-      visibility: visible  ;
-    }
-  }
-  .burguer{
-    @media(min-width: 768px){
-      visibility: hidden;
-    }
-  }`
+}
+  `
 
   
   
