@@ -12,7 +12,13 @@ function App() {
     
     <>
     <Navbar/>
-      
+    <div className="App">
+      <Card
+            card_imagen = 'cubrealfombra'
+            titulo_card = 'Cubre Alfombra'
+            texto_card = 'Cubre alfombra de goma Vapren para habitáculo Audi A3'/>
+          
+    </div>
     </>
     
   );

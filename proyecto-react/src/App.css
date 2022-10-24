@@ -6,7 +6,7 @@
 
 html, body {
   font-size: 18px;
-  background-color: #b2b8bd;
+  background-color: #fff;
   width: 100%;
 }
 
@@ -25,22 +25,25 @@ html, body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #b2b8bd;
   }
 }
 
-@media (max-widht: 767px){
+@media (max-width: 767px){
   .App {
     flex-direction: column;
+    background-color: #b2b8bd;
   }
 }
-/* .App {
+.App {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
-} */
+  background-color: #b2b8bd;
+} 
 
 .contenedor-principal {
   min-height: 300px;
