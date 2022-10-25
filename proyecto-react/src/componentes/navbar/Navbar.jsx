@@ -15,7 +15,10 @@ import BurguerButton from './BurguerButton'
       // comparacion con un ternario  ? :handleClick={handleClick}  
       
         <NavContainer>
-            <h2>Logo</h2>
+            <img className="card-img"
+                src={require('../../imagenes/logo.jpg')}
+                alt= ''
+                />
             <div  className={`links ${clicked ? 'active' : ''}`}>
                 <a  href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">inicio</a>
                 <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">productos</a>
@@ -34,9 +37,13 @@ export default Navbar
 //estilos componentes
 const NavContainer = styled.nav`
 
-h2{
-  color:#fff;
+img{
+  
   margin-left:0.5rem;
+  height: 3rem;
+  width: 5rem;
+  object-fit:contain;
+  border-radius: 10%;
 }
 @media(max-width : 350px){
   width: 350px;
