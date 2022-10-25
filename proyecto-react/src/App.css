@@ -12,11 +12,20 @@ html, body {
 
 .contenedor_card_general{
   display: grid;
-  grid-template-columns: repeat(auto-fit, [col-start] minmax(300px, 1fr) [col-end]);
-  gap: 20px;
-  margin: 30px;
+  grid-template-columns: repeat(auto-fit, [col-start] minmax(11rem, 1fr) [col-end]);
+  gap: 2rem;
+  margin-top: 3.5rem;
 }
 
+
+@media (max-width: 480px){
+  .contenedor_card_general{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, [col-start] minmax(11rem, 1fr) [col-end]);
+    gap: 5rem;
+    margin-top: 3.5rem;
+  }
+}
  @media (min-width: 480px){
   .App {
     min-height: 100vh;
@@ -51,4 +60,16 @@ html, body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 3.5rem;
+}
+
+@media (max-width: 480px){
+  .contenedor_card_general{
+    margin-left: 5.6rem;
+  }
+}
+@media (max-width: 280px){
+  .contenedor_card_general{
+    margin-left: 3rem;
+  }
 }

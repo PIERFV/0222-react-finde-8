@@ -12,7 +12,7 @@ function Card (props) {
           <p className="text-body">{props.texto_card}</p>
         </div>
         <div class="card-footer">
-        <span class="text-title">$499.49</span>
+        <span class="text-title">{props.precio_card}</span>
         <button name="compras"> Comprar </button>
         </div>
       </Cartas>
@@ -24,14 +24,18 @@ function Card (props) {
 export default Card
 
 const Cartas  = styled.div`
+
   width: 11rem;
-  height: auto;;
+  height: auto;
   padding: .8rem;
   background: #f5f5f5;
   position: relative;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding-bottom: 1rem;
   border-radius: 5% 5% 5% 5%;
+  left: 1rem;
+
+
 
   .card-img {
     border: 1px solid #000;
