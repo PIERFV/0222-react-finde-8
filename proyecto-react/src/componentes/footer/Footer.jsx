@@ -8,22 +8,11 @@ function PieDePag (){
     return (
         <>
         <Footer>
-        < div className='Descripcion'>
-                <h3> Nosotros !!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laudantium, tempora ducimus, 
-                    consequuntur ad a, temporibus quis quaerat exercitationem vel totam labore natus? Nostrum eos quo,
-                    maxime placeat perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
-                    consequuntur accusamus blanditiis ex laudantium ipsa eligendi est! Assumenda qui quas iure laborum cupiditate,
-                    praesentium tenetur exercitationem esse delectus suscipit harum!</p>
-                    <ul>
-                        <li><a href="#"> inicio</a></li>
-                        <li><a href="#"> Productos</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                    </ul>
-                    <p className='copyright'>&copy Copyright - 2022</p>
-            </ div>
             <div className="logo_input">
-                <h3> Logo </h3>
+            <img className="card-img"
+                src={require('../../imagenes/logo.jpg')}
+                alt= 'logo de la empresa'
+                />
                 <p>¿ Quieres recibir promociones ?</p>
                 <form>
                     <div className="formu">
@@ -33,9 +22,26 @@ function PieDePag (){
                     <Button type = "submit" id="09876"/>
                     </div>
                 </form>
+                </div>
+                < div className='Descripcion'>
+                <h3 > Nosotros !!</h3>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laudantium, tempora ducimus, 
+                    consequuntur ad a, temporibus quis quaerat exercitationem vel totam labore natus? Nostrum eos quo,
+                    maxime placeat perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+                    consequuntur accusamus blanditiis ex laudantium ipsa eligendi est! Assumenda qui quas iure laborum cupiditate,
+                    praesentium tenetur exercitationem esse delectus suscipit harum!</p>
+                    <ul >
+                        <li><a href="#"> inicio</a></li>
+                        <li><a href="#"> Productos</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                    </ul>
+                    
+            </ div>
                 
+            
+            <div className='copyrighty '>
+                <p > Copyright - 2022</p>
             </div>
-               
         </Footer>
         </>
     )
@@ -44,122 +50,220 @@ function PieDePag (){
 
 export default PieDePag
 // estilizar componentes 
-const Footer = styled.footer`
-    /*Footer*/
-    width : 100%;
-    background-color: #324A51;
-    height: 65vh;
-    display : flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    padding: .4rem;
-    @media(max-width : 768px){
-        display: flex;
-        height: 49rem;
-        flex-direction: column-reverse;
-        justify-content :center;
-        align-content: space-between;
-        
-        
-    }
+const Footer = styled.div`
+display:grid;
+background-color:#000;
+margin-top: 3.5rem;
+width:100%;
+height:100%;
+grid-template-columns: repeat(2, 1fr);
 
-.Descripcion{
-   width : 75%;
-   background-color: #324A51;
-   text-align: center;
-   height: 55vh;
-   @media(max-width : 768px){
-    display: flex;
-    background-color:#324A51;
-    width : 100%;
-    height: 33rem;
-    flex-direction: column;
-    margin-top:2rem;
-    h3{
-    text-aling: center;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-    }
-
-
-    }
-}
-.Descripcion h3{
-    margin-bottom: 3vh;
-}
-
-.Descripcion p{
-    color : #000;
-}
-ul {
-    padding: 2rem;
-    text-align: left;
-    list-style: none;
-}
-li{
-    margin: 3vh;
-}
-/*naranja #FB9039;*/
-
-li a{
-    color: #000;
-    text-decoration: none;
-    padding: 2rem;
-    
-}
 .logo_input{
-    background-color:#324A51;
-    width: 25%;
-    height: 55vh;
-    @media(max-width : 768px){
-        background-color : #324A51;
-        width: 50%;
+    width:100%;
+    display:grid;
+    color:#fff;
+    background-color:#000;
+    p{
+        margin-bottom:-2rem;
+    }
+    img {
+        margin-left:0.5rem;
+        height: 3rem;
+        width: 5rem;
+        object-fit:contain;
+        border-radius: 10%;
+        margin-bottom:0.7rem;
+        margin-top:0.7rem;
+    }
+    .formu{
+        
+        margin-bottom:0.7rem;
+        margin-left:1.7rem;
+    }
+    .boton{
+        margin-left:3.7rem;
+    }
+
+}
+.Descripcion{
+    width:100%;
+    display:grid;
+    margin-top: 2.5rem;
+    background-color:#000;
+    color:#fff;
+    text-align:center;
+    ul{ 
+    list-style:none;
+    text-align:left;
+    }
+    a{
+        text-decoration: none;
+        color:#fff;
+        margin-left:0rem;
+        font-size:1.1rem;
+        margin-top:0.7rem;
+        margin-bottom:0.7rem;
+    }
+}
+.copyrighty{
+    text-align:center;
+    color:#fff;
+    margin-bottom:0rem;
+    width:100%;
+    grid-row:3;
+    grid-column: 1 / 3;
+    background-color:#000;
+    p{
+        padding-top: 2rem;
+    }
+}
+
+
+
+
+/* 800 */
+@media(max-width : 800px){
+    width: 100%;
+    padding: .4rem;
+    background-color:#000;
+    margin-top: 3.5rem;
+    height:100%;
+    grid-template-columns: 1fr;
+  }
+
+  @media(max-width : 800px){
+    .Descripcion{
+        width:100%;
+        float:none;
+        display:flex;
+        flex-direction:column;
+        margin-top: 2.5rem;
+        background-color:#000;
+        color:#fff;
+        text-align:center;
+        ul{ 
+        list-style:none;
+        text-align:left;
+        }
+        a{
+            text-decoration: none;
+            color:#fff;
+            margin-left:0rem;
+            font-size:1.1rem;
+            margin-top:0.7rem;
+            margin-bottom:0.7rem;
+        }
+    }
+  }
+
+  @media(max-width : 800px){
+    .copyrighty{
+        text-align:center;
+        color:#fff;
+        margin-bottom:0rem;
+        background-color:#000;
+        p{
+            padding-top: 2rem;
+        }
+    }
+}
+
+@media(max-width : 800px){
+    .logo_input{
+        width:100%;
+        background-color:#000;
+        color:#fff;
+        display:flex;
+        flex-direction:column;
+        p{
+            margin-bottom:0.7rem;
+            padding-top: 2rem;
+            margin-left:1.7rem;
+        }
+        img {
+            margin-left:0.5rem;
+            height: 3rem;
+            width: 5rem;
+            object-fit:contain;
+            border-radius: 10%;
+            margin-bottom:0.7rem;
+            margin-top:0.7rem;
+        }
         .formu{
-            text-align: center;
+            margin-top:0.7rem;
+            margin-bottom:0.7rem;
+            margin-left:1.7rem;
         }
         .boton{
-            text-align: center;
-            margin-top: 3vh;
+            margin-left:3.7rem;
         }
     }
 
 }
 
-.logo_input h3{
-    text-align : left ;
-    margin-left : 1rem;
-    margin-top : 1.3rem
+/* 350 */
+@media(max-width : 350px){
+    width: 350px;
+    background-color:#000;
+    grid-template-columns: 1fr;
 }
 
-.logo_input p{
-    margin-top : 2.5rem;
-    margin-left : 1.2rem;
-    margin-bottom: 1.2rem;
-    font-weight: bold;
+@media(max-width : 350px){
+    .logo_input{
+        color:#fff;
+        grid-row:1;
+        img {
+            margin-left:0.5rem;
+            height: 3rem;
+            width: 5rem;
+            object-fit:contain;
+            border-radius: 10%;
+            margin-bottom:0.7rem;
+            margin-top:0.7rem;
+        }
+        .formu{
+            margin-top:0.7rem;
+            margin-bottom:0.7rem;
+            margin-left:1.7rem;
+        }
+        .boton{
+            margin-left:3.7rem;
+        }
+    }
 
 }
-from{
-    margin-left : 1rem;
-}
 
-.formu{
-    text-align: center;
-    padding-right: 8vh;
-}
-.boton{
-    text-align: center;
-    margin-top: 3vh;
-    padding-right: 10vh;
-}
+@media(max-width : 350px){
+    .Descripcion{
+        margin-top: 2.5rem;
+        background-color:#000;
+        color:#fff;
+        text-align:center;
+        grid-row:2;
+        a{
+            text-decoration: none;
+            color:#fff;
+            margin-right:9rem;
+            font-size:1.1rem;
+            margin-top:0.7rem;
+            margin-bottom:0.7rem;
+        }
+    }
+  }
 
-.copyright{
-    padding-right: 15rem;
-    @media(max-width : 768px){
-        text-align: center;
-        margin-left : 12rem;
-        margin-top: 11.4vh;
-        
+  @media(max-width : 350px){
+    .copyrighty{
+        grid-row:3;
+        text-align:center;
+        color:#fff;
+        margin-bottom:0rem;
+        background-color:#000;
+        p{
+            padding-top: 2rem;
+        }
     }
 }
+
+
 `
 

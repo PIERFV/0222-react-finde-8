@@ -72,6 +72,9 @@ const Cartas  = styled.div`
     position: relative;
     letter-spacing: 1px;
     border-radius: 15% 15% 15% 15%;
+    margin-bottom:1rem ;
+    margin-left: .5rem;
+    margin-right: 1rem;
    }
    
    button::before {
@@ -90,12 +93,18 @@ const Cartas  = styled.div`
     transition: 0.15s ease-in-out;
     font-weight: bold;
     border-radius: 15% 15% 15% 15%;
+    margin-bottom:1rem ;
+    margin-left: .5rem;
+    margin-right: 1rem;
    }
    
    button:hover::before {
     top: 0;
     left: 0;
     border-radius: 15% 15% 15% 15%;
+    margin-bottom:1rem ;
+    margin-left: .5rem;
+    margin-right: 1rem;
    }
 
 `

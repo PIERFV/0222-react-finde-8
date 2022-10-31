@@ -73,3 +73,14 @@ html, body {
     margin-left: 3rem;
   }
 }
+
+
+@media (max-width : 350px) {
+  .item{
+    visibility: hidden;
+    position: absolute;
+    top:-23rem;
+    
+  }
+}
+

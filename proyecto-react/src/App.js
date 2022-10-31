@@ -7,12 +7,15 @@ import PieDePag from './componentes/footer/Footer';
 
 
 
+
 function App() {
   return (
     
     <>
     <Navbar/>
+    <div className='item'>
     < CarouselFadeExample/>
+    </div>
     <div className="contenedor_card_general">
       <Card
             card_imagen = 'cubrealfombra'
@@ -69,6 +72,7 @@ function App() {
           precio_card= '684,87'
           />
     </div>
+    <PieDePag/>
     </>
     
   );
