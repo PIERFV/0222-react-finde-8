@@ -41,7 +41,6 @@ html, body {
 @media (max-width: 767px){
   .App {
     flex-direction: column;
-    background-color: #b2b8bd;
   }
 }
 .App {
@@ -51,7 +50,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #b2b8bd;
+
 } 
 
 .contenedor-principal {
@@ -83,4 +82,7 @@ html, body {
     
   }
 }
-
+.fijo{
+  width: 11rem;
+height: 36rem;
+}
