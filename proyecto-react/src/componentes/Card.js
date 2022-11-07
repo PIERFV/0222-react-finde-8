@@ -8,7 +8,7 @@ function Card (props) {
   const [estadoModal2, cambiarEstadoModal2] = useState(false);
 
     //cuando esta true lo pasa a false y vice versa
-
+        
   return (
       <Cartas
     
@@ -41,7 +41,7 @@ function Card (props) {
                         src={require(`../imagenes/${props.card_imagen}.jpg`)}
                         />
                         
-                        <Boton onClick={() =>cambiarEstadoModal2(!estadoModal2) }>aceptar</Boton>
+                        <Boton  onClick={props.handleClick}>aceptar</Boton>
                     </Contenido>
             </Modal>
         </Bottonnes>
@@ -61,7 +61,7 @@ export default Card
 const Cartas  = styled.div`
 
   width: 11rem;
-  height: auto;
+  height: 33.8rem;
   padding: .8rem;
   background: #f5f5f5;
   position: static;
