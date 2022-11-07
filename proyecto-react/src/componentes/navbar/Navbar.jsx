@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import BurguerButton from './BurguerButton'
+import  Modal from '../Ventana/modal'
 
-
- function Navbar(){ 
+ function Navbar({ count}){ 
     //se usa el metodo useState para actualizar el componente burguerbutton
     const [clicked, setClicked] = useState(false)
     const handleClick = () => {
@@ -17,13 +17,22 @@ import BurguerButton from './BurguerButton'
         <NavContainer>
             <img className="card-img"
                 src={require('../../imagenes/logo.jpg')}
-                alt= ''
+                alt= 'logo de la empresa '
                 />
             <div  className={`links ${clicked ? 'active' : ''}`}>
+            <div className='numer'><span >{count}</span></div>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" 
+                                                                                width="2.5rem" height="2rem" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">{count}
+                                                                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0
+                                                                                     0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3
+                                                                                      0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0
+                                                                                       5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2
+                                                                                        2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                                                                              </svg></a>
                 <a  href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">inicio</a>
                 <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">productos</a>
                 <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">Nosotros</a>
-                <a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">Compras</a>
+              
             </div>
             <div className='burguer'>
                 <BurguerButton clicked={clicked} handleClick={handleClick}/>
@@ -35,6 +44,9 @@ import BurguerButton from './BurguerButton'
 
 export default Navbar
 //estilos componentes
+
+
+
 const NavContainer = styled.nav`
 
 img{
@@ -87,6 +99,18 @@ z-index:1000;
     color:#fff;
     font-size:1.2rem;
   }
+  .numer{
+    position:absolute;
+    right:13.5rem;
+    font-size:1.3rem;
+    color:#000;
+    top:.2rem;
+    width:1.5rem;
+    height:1.7rem;
+    background-color:#fff;
+    border-radius: 50%;
+    padding-right:.4rem;
+  }
 }
 
 .links.active{
@@ -97,7 +121,7 @@ z-index:1000;
   background-color:#5E5E5E;
   height :20rem;
   position:absolute;
-  top:3.9rem;
+  top:3.8rem;
   right:0rem;
   text-align: right;
   border-radius: 5% 0  5% 5%;
@@ -109,6 +133,18 @@ z-index:1000;
     text-decoration: none;
     color:#fff;
     font-size:1.2rem;
+  }
+  .numer{
+    position:absolute;
+    right:.5rem;
+    font-size:1.2rem;
+    color:#fff;
+    top:0rem;
+    width:1.5rem;
+    height:1.7rem;
+    background-color:#000;
+    border-radius: 50%;
+    padding-right:.4rem;
   }
 }
 
@@ -137,7 +173,6 @@ z-index:1000;
     font-size:1.1rem;
     }
   }
-  
 
 }
   `
