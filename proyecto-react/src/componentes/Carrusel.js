@@ -70,11 +70,12 @@ const photo = {
 }
 
 const letra ={
-  color: '#FFAD4E'
+  color: '#ff0303 '
 }
 
 const letra1={
-  color:'#00B1CC'
+  color: '#e9ff88',
+  
 }
 
 
