@@ -1,0 +1,77 @@
+const list = [
+    {
+      id: 1,
+      title: "Cubre Alfombra",
+      descripcion: "Cubre alfombra de goma Vapren para habitáculo Audi A3",
+      price: 500,
+      img: require('../imagenes/cubrealfombra.jpg'),
+      amount: 1,
+    },
+    {
+      id: 2,
+      title: "Deposito Refrigerante",
+      descripcion: "Deposito recuperador agua con tapa para Ford Ka",
+      price: 899,
+      img:  require('../imagenes/depositorefrigerante.jpg'),
+      amount: 1,
+    },
+    {
+      id: 3,
+      title: "Filtro de Aceite Vw",
+      descripcion: "Filtro de aceite original Volkswagen 3.0 v6",
+      price: 23,
+      img:  require('../imagenes/filtroaceite.jpg'),
+      amount: 1,
+    },
+    {
+      id: 4,
+      title: "Retrovisor para golf",
+      descripcion: "Retrovisor original Volkswagen 3.0 v6",
+      price: 1123   ,
+      img:require('../imagenes/retrovisor.jpg'),
+      amount: 1,
+    },
+    {
+      id: 5,
+      title: "Pistones Originales",
+      descripcion: "pistones originales para toyota",
+      price: 999,
+      img: require('../imagenes/pistones.jpg'),
+      amount: 1,
+    },
+    {
+      id: 6,
+      title: "cubiertas 150",
+      descripcion: "cubiertas pirelli  90 90 100 pista  sin camara ",
+      price: 2333,
+      img:  require('../imagenes/pirelli.jpg'),
+      amount: 1,
+    },
+    {
+      id: 7,
+      title: "cubiertas traseras ",
+      descripcion: "cuebiertas para motos enduro 150",
+      price: 9323,
+      img:  require('../imagenes/cubiertaEnduro.jpg'),
+      amount: 1,
+    },
+    {
+      id: 8,
+      title: "juego de cubiertas Enduro",
+      descripcion: "juego de cubiertas pirelli para motos enduro trasera  90 120 120   delantera 90 100 100",
+      price: 15586,
+      img:  require('../imagenes/cubiertasJuego.jpg'),
+      amount: 1,
+    },
+    {
+      id: 9,
+      title: "aceite para autos Mobil",
+      descripcion: "aceite semi-simtetico 30/50",
+      price: 684,
+      img:  require('../imagenes/aceiteParaAuto.jpg'),
+      amount: 1,
+    },
+    
+  ];
+  
+  export default list;
