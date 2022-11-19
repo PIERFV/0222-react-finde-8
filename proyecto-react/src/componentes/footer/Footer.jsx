@@ -7,7 +7,7 @@ import Button from './ButtonR'
 function PieDePag (){
     return (
         <>
-        <Footer>
+        <Footer >
             <div className="logo_input">
             <img className="card-img"
                 src={require('../../imagenes/logo.jpg')}
@@ -24,16 +24,16 @@ function PieDePag (){
                 </form>
                 </div>
                 < div className='Descripcion'>
-                <h3 > Nosotros !!</h3>
+                <h3 id='123'> Nosotros !!</h3>
                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laudantium, tempora ducimus, 
                     consequuntur ad a, temporibus quis quaerat exercitationem vel totam labore natus? Nostrum eos quo,
                     maxime placeat perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
                     consequuntur accusamus blanditiis ex laudantium ipsa eligendi est! Assumenda qui quas iure laborum cupiditate,
                     praesentium tenetur exercitationem esse delectus suscipit harum!</p>
                     <ul >
-                        <li><a href="#"> inicio</a></li>
-                        <li><a href="#"> Productos</a></li>
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#987"> inicio</a></li>
+                        <li><a href="#345"> Productos</a></li>
+                        <li><a href="#123">Nosotros</a></li>
                     </ul>
                     
             </ div>
