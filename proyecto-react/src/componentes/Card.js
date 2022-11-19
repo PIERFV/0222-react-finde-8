@@ -4,49 +4,52 @@ import  Modal from './Ventana/modal'
 
 
 
-function Card (props) {
+function Card ({item , handleCart}) {
   const [estadoModal2, cambiarEstadoModal2] = useState(false);
-
+  const { title, descripcion, price, img } = item;
     //cuando esta true lo pasa a false y vice versa
         
   return (
+    <div className="fijo">
       <Cartas
-    
+      id="345"
       >
         <img className="card-img"
-        src={require(`../imagenes/${props.card_imagen}.jpg`)}
+       src={img}
         />
         <div className="card-info">
-          <p className="text-title">{props.titulo_card}</p>
-          <p className="text-body">{props.texto_card}</p>
-        </div>
-        <div class="card-footer">
-        <span class="text-title">{props.precio_card}</span>
+          <p >{title}</p>
+          <p >{descripcion}</p>
+        <span class="text-title">$ {price}</span>
         </div>
 
         <Bottonnes onClick={() =>cambiarEstadoModal2(!estadoModal2) }>compra
-
- <Modal
-                    estado={estadoModal2}
-                    cambiarEstado={cambiarEstadoModal2}
-                    titulo=" Repuestos "
-                    mostrarHeader={true}
-                    mostrarOverlay={true}
-                    padding={'20px'}
-                    >
-                    <Contenido>
-                    <h1>Confirmar compra</h1>
-                        <img
-                    className="imgVentana"
-                        src={require(`../imagenes/${props.card_imagen}.jpg`)}
-                        />
-                        
-                        <Boton  onClick={props.handleClick}>aceptar</Boton>
-                    </Contenido>
-            </Modal>
+            
+              <Modal
+                                estado={estadoModal2}
+                                cambiarEstado={cambiarEstadoModal2}
+                                titulo=" Repuestos "
+                                mostrarHeader={true}
+                                mostrarOverlay={true}
+                                padding={'20px'}
+                                >
+                                <Contenido>
+                                <h1>Confirmar compra</h1>
+                                    <img
+                                className="imgVentana"
+                                src={img}
+                                    />
+                                    
+                                    <Boton  onClick={()=>handleCart(item)}>aceptar</Boton>
+                                </Contenido>
+                        </Modal>
+           
+ 
         </Bottonnes>
 
       </Cartas>
+    </div>
+      
   )   
 }
 
@@ -61,7 +64,7 @@ export default Card
 const Cartas  = styled.div`
 
   width: 11rem;
-  height: 33.8rem;
+  height: 66vh;
   padding: .8rem;
   background: #f5f5f5;
   position: static;
@@ -71,6 +74,10 @@ const Cartas  = styled.div`
   left: 1rem;
   z-index: 1;
  
+  &:hover{
+    box-shadow: 0 10px 10px 10px rbga(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
 
 
   .card-img {
@@ -88,19 +95,24 @@ const Cartas  = styled.div`
     box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
     z-index: 1;
   }
-
+  .card-info p:nth-child(1) {
+    font-weight: bold;
+  }
+  .card-info p:nth-child(2) {
+    color: grey;
+    font-size: 0.8rem;
+  }
+  .card-info p:nth-child(3) {
+    font-weight: bolx;
+    color: grey;
+  }
   .text-title {
     font-weight: 900;
     font-size: 1.2em;
     line-height: 1.5;
     z-index: 1;
   }
-  .text-body {
-    font-size: .9em;
-    padding-bottom: 10px;
-    overflow:hidden;
-    z-index: 1;
-  }
+
   
 .imgVentana{
 
@@ -110,7 +122,13 @@ const Cartas  = styled.div`
   object-fit:contain;
   z-index: 1;
 }
+.fijo{
+  width: auto;
+height:auto;
 
+  
+
+}
 `
 
 
