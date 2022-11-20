@@ -25,11 +25,9 @@ function PieDePag (){
                 </div>
                 < div className='Descripcion'>
                 <h3 id='123'> Nosotros !!</h3>
-                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laudantium, tempora ducimus, 
-                    consequuntur ad a, temporibus quis quaerat exercitationem vel totam labore natus? Nostrum eos quo,
-                    maxime placeat perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
-                    consequuntur accusamus blanditiis ex laudantium ipsa eligendi est! Assumenda qui quas iure laborum cupiditate,
-                    praesentium tenetur exercitationem esse delectus suscipit harum!</p>
+                <p >Fue fundada en 1978, fruto de la necesidad de abastecer las demandas del sector, las cuales serían satisfechas en el corto plazo, poniendo acento en la comunicación, distribución, soluciones a medida y calidad en sus productos.
+                    Iniciando sus actividades en la Ciudad Autónoma de Buenos Aires, más tarde, se trasladó a Avellaneda, colocándose al alcance de los consumidores a través de su conocimiento, confiabilidad y respaldo.
+                    Hoy es sinónimo de liderazgo, prestigio, eficacia y eficiencia en los servicios a través de nuestra red de sucursales estratégicamente ubicadas.</p>
                     <ul >
                         <li><a href="#987"> inicio</a></li>
                         <li><a href="#345"> Productos</a></li>
