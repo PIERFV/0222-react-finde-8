@@ -22,7 +22,7 @@ import BurguerButton from './BurguerButton'
                 id='987'
                 />
             <div  className={`links ${clicked ? 'active' : ''}`}>
-            <div className='numer'><span >{size}</span></div>
+            {size > 0 ?<div className='numer'><span >{size}</span></div>:null}
                 <a href="#"   onClick={() => setShow(false)}><svg xmlns="http://www.w3.org/2000/svg" 
                                                                                 width="2.5rem" height="2rem" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">{size}
                                                                                 <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0
